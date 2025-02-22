@@ -10,11 +10,11 @@ name: Java CI with Maven
 
 on:
   pull_request:
-    branches: [ "main" ]
+    branches: [ main ]
 
 jobs:
   call-workflow-passing-data:
     uses: ./.github/workflows/run-tests-template.yml
     with:
-      tests-to-include: ""
+      tests-to-include: "smoke"
     secrets: inherit
