@@ -11,7 +11,7 @@
 
 ## Create Key for encrypting
 
-3. git-crypt export-key ./git-crypt-key-testRepo
+3. git-crypt export-key ./git-crypt-key-apiProject
 
 ## References
 

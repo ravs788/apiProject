@@ -1,6 +1,6 @@
-# TestRepo
+# APIProject
 
-This is my core test automation project for automation APIS and UI (on web and mobile).
+This is my core API automation project for automation APIS.
 ![](https://img.shields.io/github/issues/ravs788/TestRepo)
 ![](https://img.shields.io/github/forks/ravs788/TestRepo)
 ![](https://img.shields.io/github/stars/ravs788/TestRepo)
@@ -23,32 +23,33 @@ This is my core test automation project for automation APIS and UI (on web and m
 - [x] GitHub
 - [x] GitHub Actions
 - [ ] Faker Library
-- [ ] Elastic and Kibana
+- [x] Elastic and Kibana
 - [ ] Docker
 - [ ] Sonarqube/SonarLint
-- [ ] Badges
+- [x] Badges
 - [x] Slack Integration
+- [x] Git-Crypt
 
 ### Frameworks and Libraries
 
 - [ ] Selenium
 - [ ] Appium
-- [ ] Rest Assured
+- [x] Rest Assured
 
 ## Objectives
 
-- [ ] Prepare a base framework.
+- [x] Prepare a base framework.
 - [x] Add to CI/CD pipeline.
-- [ ] Trigger automatically on changes in source code.
-- [ ] Easy to maintain, understand and scale.
+- [x] Trigger automatically on changes in source code.
+- [x] Easy to maintain, understand and scale.
 - [ ] Speed up execution time wherever possible.
 
 ## Important Files
 
 - [x] README.md
-- [ ] pom.xml
+- [x] pom.xml
 - [x] .gitignore
-- [ ] LICENSE
+- [x] LICENSE
 - [ ] Dockerfile
 
 ## References
