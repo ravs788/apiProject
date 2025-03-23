@@ -1,0 +1,140 @@
+### Health Check
+# curl -i https://restful-booker.herokuapp.com/ping
+GET {{host}}/ping
+
+<> 2025-03-23T235248.201.txt
+
+###
+
+#### Get auth token
+#GET https://examples.http-client.intellij.net/get
+#    ?generated-in=Aqua
+#
+####
+# curl -X POST
+#  https://restful-booker.herokuapp.com/auth
+#  -H 'Content-Type: application/json'
+#  -d '{
+#    "username" : "admin",
+#    "password" : "password123"
+#}'
+POST {{host}}/auth
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "password123"
+}
+> {%  client.global.set("auth_token", response.body.token); %}
+
+<> 2025-03-23T235028.200.json
+<> 2025-03-23T234627.200.json
+<> 2025-03-23T233448.200.json
+
+### Get all bookings
+# curl -i https://restful-booker.herokuapp.com/booking
+GET {{host}}/booking
+
+<> 2025-03-23T233636.200.json
+
+
+<> 2025-03-23T234939.200.json
+<> 2025-03-23T234813.200.json
+<> 2025-03-23T233828.200.json
+
+### Create a Booking
+# curl -X POST
+#  https://restful-booker.herokuapp.com/booking
+#  -H 'Content-Type: application/json'
+#  -d '{
+#    "firstname" : "Jim",
+#    "lastname" : "Brown",
+#    "totalprice" : 111,
+#    "depositpaid" : true,
+#    "bookingdates" : {
+#        "checkin" : "2018-01-01",
+#        "checkout" : "2019-01-01"
+#    },
+#    "additionalneeds" : "Breakfast"
+#}'
+POST {{host}}/booking
+Content-Type: application/json
+
+{
+  "firstname": "Jim",
+  "lastname": "Brown",
+  "totalprice": 111,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2018-01-01",
+    "checkout": "2019-01-01"
+  },
+  "additionalneeds": "Breakfast"
+}
+> {%  client.global.set("booking_id", response.body.bookingid); %}
+<> 2025-03-23T235053.200.json
+<> 2025-03-23T234741.200.json
+<> 2025-03-23T234053.200.json
+
+
+### Get booking by id
+GET {{host}}/booking/{{booking_id}}
+
+### Update an existing booking
+
+PUT {{host}}/booking/{{booking_id}}
+Accept: application/json
+Cookie: token={{auth_token}}
+Content-Type: application/json
+
+{
+  "firstname": "James",
+  "lastname": "Brown",
+  "totalprice": 111,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2018-01-01",
+    "checkout": "2019-01-01"
+  },
+  "additionalneeds": "Breakfast"
+}
+
+<> 2025-03-23T234755.200.json
+
+### Partial Update Booking
+
+# curl -X PATCH
+#  https://restful-booker.herokuapp.com/booking/1
+#  -H 'Content-Type: application/json'
+#  -H 'Accept: application/json'
+#  -H 'Cookie: token=abc123'
+#  -d '{
+#    "firstname" : "James",
+#    "lastname" : "Brown"
+#}'
+PATCH {{host}}/booking/{{booking_id}}
+Accept: application/json
+Cookie: token={{auth_token}}
+Content-Type: application/json
+
+{
+  "firstname": "James",
+  "lastname": "Bond"
+}
+
+<> 2025-03-23T234927.200.json
+
+### Delete booking
+# curl -X DELETE
+#  https://restful-booker.herokuapp.com/booking/1
+#  -H 'Content-Type: application/json'
+#  -H 'Cookie: token=abc123'
+DELETE {{host}}/booking/{{booking_id}}
+Cookie: token={{auth_token}}
+Content-Type: application/json
+
+<> 2025-03-23T235110.201.txt
+<> 2025-03-23T235004.403.txt
+
+### Get booking by id
+GET {{host}}/booking/{{booking_id}}
