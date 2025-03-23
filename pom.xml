@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.ravs788</groupId>
-    <artifactId>TestProject</artifactId>
+    <artifactId>apiProject</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -25,6 +25,7 @@
         <elasticsearch.version>8.17.3</elasticsearch.version>
         <jakarta.json.api.version>2.0.1</jakarta.json.api.version>
         <faker.version>1.0.2</faker.version>
+        <restassured.version>5.5.1</restassured.version>
     </properties>
     <build>
         <pluginManagement>
@@ -59,6 +60,12 @@
     </reporting>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+        <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${restassured.version}</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>

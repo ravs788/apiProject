@@ -1,4 +1,4 @@
 .idea
 .vscode
 target/
-git-crypt-key-testRepo
+git-crypt-key-apiProject
