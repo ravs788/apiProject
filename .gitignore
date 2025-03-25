@@ -2,3 +2,4 @@
 .vscode
 target/
 git-crypt-key-apiProject
+**/http-client.private.env.json
