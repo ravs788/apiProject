@@ -25,7 +25,7 @@ public class BookingTests extends TestSetup {
   void assertAUserCanCreateANewBookingWithOnlyMandatoryFields() {
     // Arrange
     BookingBody bookingBody = BookingBody.getInstance();
-    bookingBody.setAdditionalneeds(null);
+    bookingBody.setAdditionalneeds(null).setTotalprice(0);
 
     // Act
     Response response = BookingAPI.newBooking(bookingBody);
