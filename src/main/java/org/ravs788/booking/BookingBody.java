@@ -31,7 +31,6 @@ public class BookingBody {
     BookingBody bookingBody =
         BookingBody.builder()
             .setFirstname("Jim")
-            .setFirstname("Jim")
             .setLastname("Brown")
             .setTotalprice(111)
             .setDepositpaid(true)
