@@ -26,6 +26,20 @@ public class BookingAPI {
         .response();
   }
 
+  public static Response getBooking(String bookingId) {
+    return given()
+        .spec(BaseSpec.get().build())
+        .log()
+        .all()
+        .when()
+        .get(CONFIG.getString("BOOKING_ID_ENDPOINT"), bookingId)
+        .then()
+        .log()
+        .all()
+        .extract()
+        .response();
+  }
+
   public static Response updateBooking(BookingBody bookingBody, String bookingId) {
     return given()
         .spec(BaseSpec.get(AuthAPI.getToken()).build())
