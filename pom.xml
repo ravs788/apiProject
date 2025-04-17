@@ -26,6 +26,7 @@
         <jakarta.json.api.version>2.0.1</jakarta.json.api.version>
         <faker.version>1.0.2</faker.version>
         <restassured.version>5.5.1</restassured.version>
+        <assertj.version>4.0.0-M1</assertj.version>
     </properties>
     <build>
         <pluginManagement>
@@ -130,6 +131,13 @@
             <groupId>com.github.javafaker</groupId>
             <artifactId>javafaker</artifactId>
             <version>${faker.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertj.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>

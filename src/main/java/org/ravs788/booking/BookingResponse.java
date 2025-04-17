@@ -1,7 +1,8 @@
 package org.ravs788.booking;
 
-import org.ravs788.booking.entities.Booking;
+import lombok.Data;
 
+@Data
 public class BookingResponse {
   private long bookingid;
   private Booking booking;

@@ -16,7 +16,7 @@ import org.ravs788.booking.entities.Bookingdates;
 @Accessors(chain = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @AllArgsConstructor
-public class BookingBody {
+public class Booking {
   private String firstname;
   private String lastname;
   private long totalprice;
@@ -24,12 +24,12 @@ public class BookingBody {
   private Bookingdates bookingdates;
   private String additionalneeds;
 
-  public static BookingBody getInstance() {
+  public static Booking getInstance() {
     Bookingdates bookingdates =
         Bookingdates.builder().setCheckin("2018-01-01").setCheckout("2019-01-01").build();
 
-    BookingBody bookingBody =
-        BookingBody.builder()
+    Booking booking =
+        Booking.builder()
             .setFirstname("Jim")
             .setLastname("Brown")
             .setTotalprice(111)
@@ -38,7 +38,7 @@ public class BookingBody {
             .setBookingdates(bookingdates)
             .build();
 
-    log.info("Booking body: {}", bookingBody);
-    return bookingBody;
+    log.info("Booking body: {}", booking);
+    return booking;
   }
 }
